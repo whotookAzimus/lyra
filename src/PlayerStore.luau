@@ -65,7 +65,7 @@ type PlayerStoreImpl<T> = {
 	) -> Promise.TPromise<boolean>,
 	save: (self: PlayerStore<T>, player: Player) -> Promise.Promise,
 	close: (self: PlayerStore<T>) -> Promise.Promise,
-	peek: (self: PlayerStore<T>, userId: number) -> T,
+	peek: (self: PlayerStore<T>, userId: number) -> Promise.TPromise<T>,
 
 	getAsync: (self: PlayerStore<T>, player: Player) -> T,
 	loadAsync: (self: PlayerStore<T>, player: Player) -> (),

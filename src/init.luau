@@ -11,6 +11,8 @@
 local Log = require(script.Log)
 local Migrations = require(script.Migrations)
 local PlayerStore = require(script.PlayerStore)
+local MockDataStoreService = require(script.MockDataStoreService)
+local MockMemoryStoreService = require(script.MockMemoryStoreService)
 
 --[=[
 	Provides helper functions for creating common migration steps.
@@ -47,6 +49,9 @@ local setLogLevel = Log.setLevel
 
 -- The public interface of the Lyra library.
 return {
+	MockDataStoreService = MockDataStoreService,
+	MockMemoryStoreService = MockMemoryStoreService,
+
 	MigrationStep = MigrationStep,
 	createPlayerStore = createPlayerStore,
 	setLogLevel = setLogLevel,
